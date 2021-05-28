@@ -5,7 +5,7 @@ $(document).ready(function () {
 });
 
 function loadDataTable() {
-    dataTable = $('#DT_load').dataTable({
+    dataTable = $('#DT_load').DataTable({
         "ajax": {
             "url": "/api/books",
             "type": "GET",
@@ -44,6 +44,7 @@ function Delete(url) {
         text: "Once deleted, you will not be able to recover",
         icon: "warning",
         showConfirmButton: true,
+        confirmButtonText: "Yes",
         showDenyButton: true,
         focusConfirm: true
     }).then(willDelete => {
